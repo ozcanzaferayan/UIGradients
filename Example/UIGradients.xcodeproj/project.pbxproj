@@ -15,6 +15,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9B935DCA69262D8072DC72F0 /* Pods_UIGradients_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDB432403A406BC668CAB2F /* Pods_UIGradients_Example.framework */; };
 		DFE5B7AC20F8D3D600948A6F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE5B7AB20F8D3D600948A6F /* CollectionViewCell.swift */; };
+		DFE5B7AE20F9831000948A6F /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE5B7AD20F9831000948A6F /* ButtonViewController.swift */; };
 		FA36D132BBDC3A58245C6846 /* Pods_UIGradients_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942EA1241607A09D5224D225 /* Pods_UIGradients_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		C452B512352F0CA8B6371429 /* Pods-UIGradients_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIGradients_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIGradients_Tests/Pods-UIGradients_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DFC6A90C20F8A0E300920418 /* UIGradients.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIGradients.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE5B7AB20F8D3D600948A6F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		DFE5B7AD20F9831000948A6F /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		EA3FD2AC4C899451FD5CF1E1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F6F4F76280919CD1A5FFBCB1 /* UIGradients.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UIGradients.podspec; path = ../UIGradients.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 		607FACD21AFB9204008FA782 /* Example for UIGradients */ = {
 			isa = PBXGroup;
 			children = (
+				DFE5B7AD20F9831000948A6F /* ButtonViewController.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -353,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFE5B7AE20F9831000948A6F /* ButtonViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				DFE5B7AC20F8D3D600948A6F /* CollectionViewCell.swift in Sources */,

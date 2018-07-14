@@ -18,7 +18,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Installation with CocoaPods
 
 UIGradients is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+it, simply add the following line to your Podfile:`
 
 ```ruby
 pod 'UIGradients'
@@ -26,7 +26,13 @@ pod 'UIGradients'
 
 ## Usage
 
-TODO:
+Gradients can apply any UIView type item.
+
+### UIButton
+```swift
+let gradient = GradientType.facebook_messenger.gradientLayerFor(view: btn)
+btn.layer.insertSublayer(gradient, at: 0)
+```
 
 ## Example Project
 

@@ -26,6 +26,14 @@ public enum GradientType:Int {
         return gradient
     }
     
+    public func gradientLayerFor(view: UIView) -> CAGradientLayer{
+        let gradient = gradientLayer
+        gradient.frame = view.bounds
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+        return gradient
+    }
+    
     
     func getUIColors(_ hexArray: [Int]) -> [CGColor] {
         return hexArray.map { rgb in UIColor(rgb: rgb).cgColor}
