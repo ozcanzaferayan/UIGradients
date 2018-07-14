@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9B935DCA69262D8072DC72F0 /* Pods_UIGradients_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDB432403A406BC668CAB2F /* Pods_UIGradients_Example.framework */; };
+		DFE5B7AC20F8D3D600948A6F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE5B7AB20F8D3D600948A6F /* CollectionViewCell.swift */; };
 		FA36D132BBDC3A58245C6846 /* Pods_UIGradients_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942EA1241607A09D5224D225 /* Pods_UIGradients_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		44AC6FF73EF25272F42B7630 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		44AC6FF73EF25272F42B7630 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4EFD81491012D26366850387 /* Pods-UIGradients_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIGradients_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIGradients_Example/Pods-UIGradients_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* UIGradients_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIGradients_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,8 +46,10 @@
 		86993EDC06650523B482FC77 /* Pods-UIGradients_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIGradients_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIGradients_Tests/Pods-UIGradients_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		942EA1241607A09D5224D225 /* Pods_UIGradients_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIGradients_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C452B512352F0CA8B6371429 /* Pods-UIGradients_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIGradients_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIGradients_Tests/Pods-UIGradients_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		EA3FD2AC4C899451FD5CF1E1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F6F4F76280919CD1A5FFBCB1 /* UIGradients.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = UIGradients.podspec; path = ../UIGradients.podspec; sourceTree = "<group>"; };
+		DFC6A90C20F8A0E300920418 /* UIGradients.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIGradients.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE5B7AB20F8D3D600948A6F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		EA3FD2AC4C899451FD5CF1E1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F6F4F76280919CD1A5FFBCB1 /* UIGradients.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UIGradients.podspec; path = ../UIGradients.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				DFC6A90C20F8A0E300920418 /* UIGradients.framework */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for UIGradients */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -105,6 +109,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				DFE5B7AB20F8D3D600948A6F /* CollectionViewCell.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -214,6 +219,7 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -349,6 +355,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				DFE5B7AC20F8D3D600948A6F /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,11 +501,14 @@
 			baseConfigurationReference = 4EFD81491012D26366850387 /* Pods-UIGradients_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UIGradients/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -509,11 +519,14 @@
 			baseConfigurationReference = 78306BFD0D00F58B06F99BCF /* Pods-UIGradients_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UIGradients/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};

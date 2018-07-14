@@ -2,46 +2,41 @@
 
 import Quick
 import Nimble
-import UIGradients
+@testable import UIGradients
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
-        describe("these will fail") {
-
-            it("can do maths") {
-                expect(1) == 2
+        describe("Gradients") {
+            let gradient = GradientType.grade_grey
+            it("name must print name") {
+                expect(gradient.name) == "grade_grey"
             }
-
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
-            
-            context("these will pass") {
-
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    DispatchQueue.main.async {
-                        time = "done"
+            context("color counts") {
+                context("two colored") {
+                    let gradient = GradientType.blu.gradientLayer
+                    it("hex values must return 2"){
+                        expect(gradient.colors?.count) == 2
                     }
-
-                    waitUntil { done in
-                        Thread.sleep(forTimeInterval: 0.5)
-                        expect(time) == "done"
-
-                        done()
+                    it("locations must return 0 and 1") {
+                        expect(gradient.locations) == [0.0,1.0]
+                    }
+                }
+                context("three colored") {
+                    let gradient = GradientType.lunada.gradientLayer
+                    it("hex values must return 2"){
+                        expect(gradient.colors?.count) == 3
+                    }
+                    it("locations must return 0.0, 0.5 1.0") {
+                        expect(gradient.locations) == [0.0, 0.5, 1.0]
+                    }
+                }
+                context("four colored") {
+                    let gradient = GradientType.hydrogen.gradientLayer
+                    it("hex values must return 2"){
+                        expect(gradient.colors?.count) == 4
+                    }
+                    it("locations must return 0.0, 0.3, 0.6, 1.0") {
+                        expect(gradient.locations) == [0.0, 0.3, 0.6, 1.0]
                     }
                 }
             }

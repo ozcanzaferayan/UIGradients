@@ -1,0 +1,6 @@
+framework module Pods_UIGradients_Example {
+  umbrella header "Pods-UIGradients_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

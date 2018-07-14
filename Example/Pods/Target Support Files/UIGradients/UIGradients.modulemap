@@ -1,0 +1,6 @@
+framework module UIGradients {
+  umbrella header "UIGradients-umbrella.h"
+
+  export *
+  module * { export * }
+}

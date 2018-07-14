@@ -7,17 +7,55 @@
 //
 
 import UIKit
+import UIGradients
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UICollectionViewDelegate,  UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let gradientHeight = 200
+        return CGSize(width: collectionView.bounds.size.width, height: CGFloat(gradientHeight))
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return GradientType.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
+        let gradientType = GradientType(rawValue: indexPath.row)
+        let gradient = gradientType?.gradientLayer
+        gradient?.frame = cell.bounds
+        gradient?.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient?.endPoint = CGPoint(x: 1.0, y: 0.5)
+        cell.label.text = gradientType?.name
+        cell.label.textColor = UIColor.white
+        if cell.layer.sublayers?.count == 2 {
+            cell.layer.sublayers?.remove(at: 0)
+        }
+        cell.layer.insertSublayer(gradient!, at: 0)
+        return cell
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        collectionView!.collectionViewLayout = layout
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 
 }
