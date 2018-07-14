@@ -9,7 +9,7 @@
 
 UIGradients project contains list of Gradient colors based on https://uigradients.com/
 
-![UIGradients screen recording](https://raw.githubusercontent.com/ozcanzaferayan/UIGradients/master/Screenshots/UIGradients_screen_recording.gif "UIGradients screen recording")
+<img src="https://raw.githubusercontent.com/ozcanzaferayan/UIGradients/master/Screenshots/UIGradients_screen_recording.gif" width="300" alt="UIGradients screen recording">
 
 ## Example
 
