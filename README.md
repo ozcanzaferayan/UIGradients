@@ -5,13 +5,17 @@
 [![License](https://img.shields.io/cocoapods/l/UIGradients.svg?style=flat)](https://cocoapods.org/pods/UIGradients)
 [![Platform](https://img.shields.io/cocoapods/p/UIGradients.svg?style=flat)](https://cocoapods.org/pods/UIGradients)
 
+## Overview
+
+UIGradients project contains list of Gradient colors based on https://uigradients.com/
+
+![UIGradients screen recording](https://raw.githubusercontent.com/ozcanzaferayan/UIGradients/master/Screenshots/UIGradients_screen_recording.gif "UIGradients screen recording")
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
-## Installation
+## Installation with CocoaPods
 
 UIGradients is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -20,9 +24,17 @@ it, simply add the following line to your Podfile:
 pod 'UIGradients'
 ```
 
+## Usage
+
+TODO:
+
+## Example Project
+
+An example project is included with this repo. To run the example project, clone the repo, and run pod install from the Example directory first.
+
 ## Author
 
-ozcanzaferayan, ozcanzaferayan@gmail.com
+Zafer AYAN, ozcanzaferayan@gmail.com
 
 ## License
 
