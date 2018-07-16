@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UIGradients'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A library that contains hundreds of gradients for Swift/iOS.'
 
 # This description is used to generate tags and improve search results.

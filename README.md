@@ -30,7 +30,7 @@ Gradients can apply any UIView type item.
 
 ### UIButton
 ```swift
-let gradient = GradientType.facebook_messenger.gradientLayerFor(view: btn)
+let gradient = UIGradients.facebook_messenger.gradientLayerFor(view: btn, angle: 0)
 btn.layer.insertSublayer(gradient, at: 0)
 ```
 

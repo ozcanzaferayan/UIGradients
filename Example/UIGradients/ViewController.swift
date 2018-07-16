@@ -21,16 +21,14 @@ class ViewController: UIViewController, UICollectionViewDelegate,  UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return GradientType.count
+        return UIGradients.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
-        let gradientType = GradientType(rawValue: indexPath.row)
-        let gradient = gradientType?.gradientLayer
+        let gradientType = UIGradients(rawValue: indexPath.row)
+        let gradient = gradientType?.makeGradientLayer(indexPath.row * 45)
         gradient?.frame = cell.bounds
-        gradient?.startPoint = CGPoint(x: 0.0, y: 0.5)
-        gradient?.endPoint = CGPoint(x: 1.0, y: 0.5)
         cell.label.text = gradientType?.name
         cell.label.textColor = UIColor.white
         if cell.layer.sublayers?.count == 2 {

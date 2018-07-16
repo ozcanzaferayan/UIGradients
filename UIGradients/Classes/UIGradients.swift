@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum GradientType:Int {
+public enum UIGradients:Int {
     public var name: String {
         return Mirror(reflecting: self).children.first?.label ?? String(describing: self)
     }
@@ -16,21 +16,35 @@ public enum GradientType:Int {
         return gradients.count
     }
     
-    public var gradientLayer: CAGradientLayer {
+    public func makeGradientLayer(_ angle: Int) ->  CAGradientLayer {
         let gradient:CAGradientLayer = CAGradientLayer()
         let colorHexes = gradients[rawValue]
         let colors = getUIColors(colorHexes)
         let locations = getGradientLocations(colorHexes)
         gradient.colors = colors
         gradient.locations = locations as [NSNumber]
+        let startEndPoints = getStartEndPointsFor(angle: angle)
+        gradient.startPoint = startEndPoints.0
+        gradient.endPoint = startEndPoints.1
         return gradient
     }
     
-    public func gradientLayerFor(view: UIView) -> CAGradientLayer{
-        let gradient = gradientLayer
+    func getStartEndPointsFor(angle: Int) -> (CGPoint, CGPoint){
+        let rotation = Double(angle % 360) / 360.0
+        let a = pow(sin((2*Double.pi*((rotation+0.75)/2))),2)
+        let b = pow(sin((2*Double.pi*((rotation+0.0)/2))),2)
+        let c = pow(sin((2*Double.pi*((rotation+0.25)/2))),2)
+        let d = pow(sin((2*Double.pi*((rotation+0.5)/2))),2)
+        return (CGPoint(x: a, y:b), CGPoint(x: c, y:d))
+    }
+    
+    public func gradientLayerFor(view: UIView, angle: Int) -> CAGradientLayer{
+        let gradient = makeGradientLayer(0)
+        let points = getStartEndPointsFor(angle: angle)
         gradient.frame = view.bounds
-        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
-        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+        gradient.startPoint = points.0
+        gradient.endPoint = points.1
+        
         return gradient
     }
     

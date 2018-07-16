@@ -7,13 +7,13 @@ import Nimble
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
         describe("Gradients") {
-            let gradient = GradientType.grade_grey
+            let gradient = UIGradients.grade_grey
             it("name must print name") {
                 expect(gradient.name) == "grade_grey"
             }
             context("color counts") {
                 context("two colored") {
-                    let gradient = GradientType.blu.gradientLayer
+                    let gradient = UIGradients.blu.makeGradientLayer(0)
                     it("hex values must return 2"){
                         expect(gradient.colors?.count) == 2
                     }
@@ -22,7 +22,7 @@ class TableOfContentsSpec: QuickSpec {
                     }
                 }
                 context("three colored") {
-                    let gradient = GradientType.lunada.gradientLayer
+                    let gradient = UIGradients.lunada.makeGradientLayer(0)
                     it("hex values must return 2"){
                         expect(gradient.colors?.count) == 3
                     }
@@ -31,7 +31,7 @@ class TableOfContentsSpec: QuickSpec {
                     }
                 }
                 context("four colored") {
-                    let gradient = GradientType.hydrogen.gradientLayer
+                    let gradient = UIGradients.hydrogen.makeGradientLayer(0)
                     it("hex values must return 2"){
                         expect(gradient.colors?.count) == 4
                     }
